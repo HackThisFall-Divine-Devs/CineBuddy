@@ -88,7 +88,7 @@ async function fetchJoinRequests(req, res) {
 
   try {
     
-    const user = await User.findById(userId).select('Requests');
+    const user = await User.findById(userId).select('Requests').populate('Requests', 'username email'); 
 
     if (!user) {
       return res.status(404).json({
