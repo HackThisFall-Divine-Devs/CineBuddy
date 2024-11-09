@@ -35,7 +35,6 @@ router.get('/search', authenticate, async (req, res) => {
   if (movieName) {
     query.movieName = { $regex: movieName, $options: 'i' }; 
   }
-
   
   if (date) {
     query.date = new Date(date);
@@ -55,6 +54,9 @@ router.get('/search', authenticate, async (req, res) => {
 
 
 
-
-
 module.exports = router;
+
+
+
+
+

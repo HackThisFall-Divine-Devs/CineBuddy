@@ -1,5 +1,6 @@
 const Room = require('../models/roomModel');
 const User = require('../models/userModel'); 
+const Movie = require('../models/movieModel'); 
 
 //  Create  Room 
 exports.createRoom = async (req, res) => {
@@ -16,13 +17,41 @@ exports.createRoom = async (req, res) => {
     languagePreference,
     type,
     genre,
-    otherDetails
+    otherDetails,
+    movieData
 
   } = req.body;
 
   try {
     const userId = req.user.id; 
 
+
+
+   
+    let movie = await Movie.findOne({ title: movieName });
+
+    if (!movie) {
+   
+      movie = new Movie({
+        adult: movieData.adult,
+        backdropPath: movieData.backdropPath,
+        genre: movieData.genre,  
+        id: movieData.id,
+        originalLanguage: movieData.originalLanguage,
+        originalTitle: movieData.originalTitle,
+        overview: movieData.overview,
+        popularity: movieData.popularity,
+        posterPath: movieData.posterPath,
+        releaseDate: movieData.releaseDate,
+        title: movieData.title,
+        video: movieData.video,
+        voteAverage: movieData.voteAverage,
+        voteCount: movieData.voteCount,
+      });
+
+      await movie.save();
+      console.log('Movie added!!');
+    }
 
     const room = new Room({
       groupName,
@@ -38,6 +67,7 @@ exports.createRoom = async (req, res) => {
       type,
       genre,
       otherDetails,
+      movie: movie._id,
       createdBy: userId, 
     });
 
@@ -48,6 +78,7 @@ exports.createRoom = async (req, res) => {
     return res.status(201).json({
       success: true,
       room: createdRoom,
+      movie: movie,
     });
   } catch (error) {
     console.error(error);
