@@ -16,6 +16,8 @@ exports.createRoom = async (req, res) => {
     languagePreference,
     type,
     genre,
+    otherDetails
+
   } = req.body;
 
   try {
@@ -35,6 +37,7 @@ exports.createRoom = async (req, res) => {
       languagePreference,
       type,
       genre,
+      otherDetails,
       createdBy: userId, 
     });
 

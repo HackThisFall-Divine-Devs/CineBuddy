@@ -51,6 +51,7 @@ const roomSchema = new mongoose.Schema({
     enum: ['horror', 'comedy', 'action', 'romantic', 'thriller', 'drama', 'sci-fi', 'documentary'],
     required: true,
   },  
+  otherDetails: { type: String},  
   createdAt: { type: Date, default: Date.now },  // Timestamp for when the room was created
 });
 
