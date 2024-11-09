@@ -1,6 +1,7 @@
 const User = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const Room = require('../models/roomModel');
 
 
 async function registerUser(req, res) {
@@ -141,5 +142,41 @@ async function JoinStream(req, res) {
 };
 
 
-module.exports = { registerUser,loginUser, getAllUsers,fetchJoinRequests,JoinStream};
+
+async function myRooms(req, res){
+  const userId = req.user.id; 
+
+  try {
+  
+    const rooms = await Room.find({
+      $or: [
+        { joinedMembers: userId }, 
+        { createdBy: userId }       
+      ]
+    })
+      .populate('createdBy', 'username email')      
+      .populate('joinedMembers', 'username email')  
+      .populate('movie');                            
+
+    if (rooms.length === 0) {
+      return res.status(200).json({
+        success: true,
+        message: 'No rooms found for this user',
+        rooms: []
+      });
+    }
+
+ 
+    res.status(200).json({ success: true, rooms });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Error fetching user rooms'
+    });
+  }
+};
+
+
+module.exports = { registerUser,loginUser, getAllUsers,fetchJoinRequests,myRooms, JoinStream};
 
