@@ -8,6 +8,7 @@ const {
   handleJoinRequest,
   viewJoinRequests,
   addFriendToRoom,
+  startStream,
 } = require('../controllers/roomController');
 
 const router = express.Router();
@@ -44,6 +45,7 @@ router.post('/:roomId/request-join', authenticate, requestToJoinRoom);
 router.post('/:roomId/handle-request/:userId', authenticate, handleJoinRequest);
 router.get('/:roomId/join-requests', authenticate, viewJoinRequests);
 router.post('/:roomId/add-friend', authenticate, addFriendToRoom);
+router.post('/:roomId/start-stream', authenticate, startStream);
 
 
 module.exports = router;

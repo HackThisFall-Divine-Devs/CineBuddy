@@ -32,6 +32,10 @@ const userSchema = new mongoose.Schema({
     type: [String],
     default: [],
   },
+  jitsiLink: {
+    type: String,
+    default: null,
+},
   joinedRooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
   Requests:[{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   createdAt: {

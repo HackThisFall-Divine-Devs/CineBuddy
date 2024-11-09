@@ -121,5 +121,25 @@ async function fetchJoinRequests(req, res) {
 };
 
 
-module.exports = { registerUser,loginUser, getAllUsers,fetchJoinRequests};
+async function JoinStream(req, res) {
+  const userId = req.user.id;
+
+  try {
+      const user = await User.findById(userId);
+      if (!user.jitsiLink) {
+          return res.status(404).json({ success: false, message: 'No active stream link available' });
+      }
+
+      return res.status(200).json({
+          success: true,
+          jitsiLink: user.jitsiLink,
+      });
+  } catch (error) {
+      console.error(error);
+      return res.status(500).json({ success: false, message: 'Error retrieving stream link' });
+  }
+};
+
+
+module.exports = { registerUser,loginUser, getAllUsers,fetchJoinRequests,JoinStream};
 

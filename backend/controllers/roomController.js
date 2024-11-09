@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const Room = require('../models/roomModel');
 const User = require('../models/userModel'); 
 const Movie = require('../models/movieModel'); 
@@ -371,5 +372,45 @@ exports.addFriendToRoom = async (req, res) => {
       console.error(error);
       return res.status(500).json({ success: false, message: 'Error adding friend to the room' });
   }
+};
+
+
+
+//Jitsi link 
+exports.startStream = async (req, res) => {
+  const { roomId } = req.params;
+  const creatorId = req.user.id; 
+
+  try {
+   
+      const room = await Room.findById(roomId);
+      if (!room) {
+          return res.status(404).json({ success: false, message: 'Room not found' });
+      }
+
+      if (room.createdBy.toString() !== creatorId) {
+          return res.status(403).json({ success: false, message: 'Only the room creator can start the stream' });
+      }
+
+   
+      const jitsiRoomName = `cine-buddy-${uuidv4()}`;
+      const jitsiLink = `https://meet.jit.si/${jitsiRoomName}`;
+      
+      
+      room.jitsiLink = jitsiLink;
+      await room.save();
+
+      await User.updateMany(
+          { _id: { $in: room.joinedMembers } },
+          { $set: { jitsiLink: jitsiLink } }
+      );
+      return res.status(200).json({
+        success: true,
+        jitsiLink: jitsiLink,
+    });
+} catch (error) {
+    console.error(error);
+    return res.status(500).json({ success: false, message: 'Error starting stream' });
+}
 };
   

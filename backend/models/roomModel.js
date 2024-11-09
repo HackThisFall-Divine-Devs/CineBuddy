@@ -29,6 +29,10 @@ const roomSchema = new mongoose.Schema({
     type: String, 
     required: true 
   },  
+  jitsiLink: {
+    type: String,
+    default: null,
+},
   genderPreference: {
     type: String,
   },

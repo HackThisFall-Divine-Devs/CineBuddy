@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-     "start": "node app.js",
-     "test": "echo \"Error: no test specified\" && exit 1"
-
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -14,7 +13,8 @@
     "express": "^4.21.1",
     "firebase-admin": "^12.7.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.8.0"
+    "mongoose": "^8.8.0",
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "node-cron": "^3.0.3"
