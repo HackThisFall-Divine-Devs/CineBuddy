@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from output_parsers import RoomRecommendation
+from llm.output_parsers import RoomRecommendation
 import os
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -30,32 +30,4 @@ def generate_preference(user_history):
         )
     )
 
-    
-
     return res
-
-
-user_history = [
-{
-    "ageGroup": "18to25",
-    "languagePreference": "English",
-    "genre": "action",
-    "timePreference": "morning",
-    "genderPreference": "female"
-
-},
-
-{
-    "ageGroup": "26to40",
-    "languagePreference": "English",
-    "genre": "emotional",
-    "timePreference": "afternoon",
-    "genderPreference": "female"
-}
-]
-
-if __name__ == "__main__":
-    from dotenv import load_dotenv
-    load_dotenv()
-    preference = generate_preference(user_history)
-    print(preference)

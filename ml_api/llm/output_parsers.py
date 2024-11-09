@@ -25,7 +25,7 @@ class GenderPreference(enum.Enum):
 
 class RoomRecommendation(T.TypedDict):
     ageGroup: AgeGroup
-    languagePreference: str
+    languagePreference: list[str]
     genre: str
     timePreference: TimePreference
     genderPreference: GenderPreference
