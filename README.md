@@ -31,7 +31,40 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 
- 
+
+
+
+# 📃API Documentation
+Backend API hosted at [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://cine-buddy-backend.vercel.app)  
+Machine Learning API hosted at [![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)](https://cinebuddy.onrender.com/)  
+Few important API endpoints:  
+  
+**All Public Rooms**  
+*Description*: List all public rooms 
+```
+/api/rooms/public
+```
+
+**Room Details**  
+*Description*: Detail of a given room with id: `room_id`
+```
+/api/rooms/{room_id}
+```
+
+**Room Search**  
+*Description*: Search movies based on date and title
+```
+/api/rooms/search
+```
+
+**ML Matchmaking with Gemini API**  
+*Description*: Find relavant rooms for the given user with id `user_id`
+```
+/mlapi/matchmaking/{user_id}
+```
+
+
+
 # 🎁 Sponsor tracks we are part of!
 <img src = "https://github.com/user-attachments/assets/58bf8369-6e9e-4dbe-a6a7-afe7b7f4e52e" height="100px"> <img src = "https://github.com/user-attachments/assets/adad5efd-d553-413f-b28a-f21636f41f98" height="100px"> <img src = "https://github.com/user-attachments/assets/677a5c28-0cc1-4c0e-9637-ea6c6efe5e69" height="100px"> <img src = "https://github.com/user-attachments/assets/3ecea176-a9ca-4501-b92e-fe4b5d3bccde" height="100px"> <img src = "https://github.com/user-attachments/assets/eff62dbf-f092-444f-92e2-3aa64b677101" height="100px">
 
