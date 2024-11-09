@@ -5,13 +5,11 @@ const roomSchema = new mongoose.Schema({
   movieName: { type: String, required: true }, 
   public: { type: Boolean, default: true }, 
   timePreference: {
-    type: String,
-    enum: ['morning', 'noon', 'evening', 'late night'],  
+    type: String, 
     required: true,
   },
   timezone: {
-    type: String,
-    enum: ['IST', 'GMT'], 
+    type: String, 
     required: true,
   },
   date: { type: Date, required: true },  
@@ -29,17 +27,13 @@ const roomSchema = new mongoose.Schema({
   pendingRequests: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   ageGroup: { 
     type: String, 
-    enum: ['12-18','18-25', '25-35', '35+'], 
     required: true 
   },  
   genderPreference: {
     type: String,
-    enum: ['anyone', 'only girls', 'only boys'],
-    default: 'anyone',
   },
   languagePreference: {
     type: [String],
-    enum: ['English', 'Hindi', 'Spanish', 'French', 'German', 'Others'],
     default: ['English'],  
   },
 
@@ -47,7 +41,6 @@ const roomSchema = new mongoose.Schema({
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, 
   genre: {
     type: String,
-    enum: ['horror', 'comedy', 'action', 'romantic', 'thriller', 'drama', 'sci-fi', 'documentary'],
     required: true,
   },
   movie: { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }, 
