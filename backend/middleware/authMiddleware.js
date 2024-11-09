@@ -1,20 +1,20 @@
-const admin = require('firebase-admin');
+const jwt = require("jsonwebtoken");
 
-async function verifyToken(req, res, next) {
-  const idToken = req.headers.authorization?.split('Bearer ')[1];
+const authMiddleware = (req, res, next) => {
+  const token = req.header("Authorization")?.split(" ")[1];
 
-  if (!idToken) {
-    return res.status(401).send('Unauthorized');
+  if (!token) {
+    return res.status(401).json({ message: "Access denied. No token provided." });
   }
 
   try {
-    const Token = await admin.auth().verifyIdToken(idToken);
-    req.user = Token;
-    next(); 
+  
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded; 
+    next();
   } catch (error) {
-    console.error('Error verifying token:', error);
-    res.status(401).send('Unauthorized: Invalid token');
+    res.status(400).json({ message: "Invalid token." });
   }
-}
+};
 
-module.exports = verifyToken;
+module.exports = authMiddleware;

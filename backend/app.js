@@ -5,9 +5,7 @@ const admin = require('firebase-admin');
 const adminsdkAccount = require('./config/cine-buddy-firebase-adminsdk.json');
 const connectDB = require('./database/db.js');
 
-admin.initializeApp({
-  credential: admin.credential.cert(adminsdkAccount),
-});
+
 
 const app = express();
 app.use(express.json());

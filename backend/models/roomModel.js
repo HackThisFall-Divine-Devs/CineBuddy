@@ -1,4 +1,3 @@
-// models/roomModel.js
 const mongoose = require('mongoose');
 
 const roomSchema = new mongoose.Schema({
@@ -50,9 +49,9 @@ const roomSchema = new mongoose.Schema({
     type: String,
     enum: ['horror', 'comedy', 'action', 'romantic', 'thriller', 'drama', 'sci-fi', 'documentary'],
     required: true,
-  },  
-  otherDetails: { type: String},  
-  createdAt: { type: Date, default: Date.now },  // Timestamp for when the room was created
+  },
+  movie: { type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }, 
+  createdAt: { type: Date, default: Date.now },  
 });
 
 const Room = mongoose.model('Room', roomSchema);

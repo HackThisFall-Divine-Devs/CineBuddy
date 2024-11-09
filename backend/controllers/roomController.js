@@ -303,51 +303,66 @@ exports.viewJoinRequests = async (req, res) => {
 
 // Add Friends to the Group/ Room by admin of the roomm
 exports.addFriendToRoom = async (req, res) => {
-    const { roomId } = req.params;
-    const { friendId } = req.body;  
-    const currentUserId = req.user.id;
-  
-    try {
+  const { roomId } = req.params;
+  const { friendId } = req.body;  
+  const currentUserId = req.user.id;
+
+  try {
       const room = await Room.findById(roomId)
       .populate('joinedMembers', 'username email')
       .populate('createdBy', 'username email')
       .populate({
-        path: 'movie',
-        model: 'Movie',
+          path: 'movie',
+          model: 'Movie',
       });
-  
+
       if (!room) {
-        return res.status(404).json({ success: false, message: 'Room not found' });
+          return res.status(404).json({ success: false, message: 'Room not found' });
       }
-  
-     
-      if (room.createdBy.toString() !== currentUserId) {
-        return res.status(403).json({
-          success: false,
-          message: 'You do not have permission to add friends to this room',
-        });
-      }
-  
-     
+
+
       if (room.joinedMembers.includes(friendId)) {
         return res.status(400).json({
-          success: false,
-          message: 'This person is already a member of the room',
+            success: false,
+            message: 'This person is already a member of the room',
         });
+    }
+      
+      if (room.createdBy.toString() !== currentUserId) {
+          return res.status(403).json({
+              success: false,
+              message: 'You do not have permission to add friends to this room',
+          });
       }
-  
-      room.joinedMembers.push(friendId);
-  
+
+     
+      const friendObjectId = mongoose.Types.ObjectId(friendId);
+
+      const isAlreadyMember = room.joinedMembers.some(
+          (member) => member._id.toString() === friendObjectId.toString()
+      );
+
+      if (isAlreadyMember) {
+          return res.status(400).json({
+              success: false,
+              message: 'This person is already a member of the room',
+          });
+      }
+
+     
+      room.joinedMembers.push(friendObjectId);
+
+     
       await room.save();
-  
+
       return res.status(200).json({
-        success: true,
-        message: 'Friend added to the room',
-        room,
+          success: true,
+          message: 'Friend added to the room',
+          room,
       });
-    } catch (error) {
+  } catch (error) {
       console.error(error);
       return res.status(500).json({ success: false, message: 'Error adding friend to the room' });
-    }
-  };
+  }
+};
   
