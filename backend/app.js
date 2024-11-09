@@ -1,12 +1,10 @@
-require('dotenv').config();
 require('./room-cleaner/roomDissolve.js'); 
 const express = require('express');
-const admin = require('firebase-admin');
-const adminsdkAccount = require('./config/cine-buddy-firebase-adminsdk.json');
 const connectDB = require('./database/db.js');
+const cors = require('cors');
 
-
-
+dotenv.config()
+app.use(cors());
 const app = express();
 app.use(express.json());
 connectDB();
