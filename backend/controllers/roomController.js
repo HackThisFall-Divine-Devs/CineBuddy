@@ -24,15 +24,8 @@ exports.createRoom = async (req, res) => {
 
   try {
     const userId = req.user.id; 
-
-
-
    
-    let movie = await Movie.findOne({ title: movieName });
-
-    if (!movie) {
-   
-      movie = new Movie({
+     const  movie = new Movie({
         adult: movieData.adult,
         backdropPath: movieData.backdropPath,
         genre: movieData.genre,  
@@ -51,8 +44,7 @@ exports.createRoom = async (req, res) => {
 
       await movie.save();
       console.log('Movie added!!');
-    }
-
+  
     const room = new Room({
       groupName,
       movieName,
