@@ -31,7 +31,7 @@ def generate_preference(user_preference, user_history):
             response_mime_type = "application/json",
             response_schema = RoomRecommendation
         ),
-        tools = 'google_search_retrieval'
+        # tools = 'google_search_retrieval'
     )
 
     return res
