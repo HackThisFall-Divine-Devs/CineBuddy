@@ -20,7 +20,7 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
 - **Open to All or Invite-Only**:
   Want to watch only with your friends or as a date? We got you covered! Groups can be made public or kept private.  If someone else wants to watch the same movie at the same time, they can easily request to join the group.
 - **GenAI based Matchmaking**:
-  Facing difficulty in finding the group that will suit you? Worry not as out Google's Gemini Based GenAI agent takes care of matchmaking for you!
+  Facing difficulty in finding the group that will suit you? Worry not as our Google's Gemini Based GenAI agent takes care of matchmaking for you!
   
   
 # 💻 Tech Stack:
