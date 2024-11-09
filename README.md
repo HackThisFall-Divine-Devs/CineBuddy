@@ -31,8 +31,16 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 
-# 🎁 Sponsor Tracks We are a part of!
+ 
+# 🎁 Sponsor tracks we are part of!
 <img src = "https://github.com/user-attachments/assets/58bf8369-6e9e-4dbe-a6a7-afe7b7f4e52e" height="100px"> <img src = "https://github.com/user-attachments/assets/adad5efd-d553-413f-b28a-f21636f41f98" height="100px"> <img src = "https://github.com/user-attachments/assets/677a5c28-0cc1-4c0e-9637-ea6c6efe5e69" height="100px"> <img src = "https://github.com/user-attachments/assets/3ecea176-a9ca-4501-b92e-fe4b5d3bccde" height="100px"> <img src = "https://github.com/user-attachments/assets/eff62dbf-f092-444f-92e2-3aa64b677101" height="100px">
 
 
 
+
+
+
+# 🤝 Collaborators
+- Akarsh Jain [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akarshjain158/) [![LinkedIn](https://img.shields.io/badge/Github-%230077B5.svg?logo=github&logoColor=white)](https://github.com/akarsh-jain-790) 
+- Sunidhi Jain [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sunidhi-jain-b71866284/) [![LinkedIn](https://img.shields.io/badge/Github-%230077B5.svg?logo=github&logoColor=white)](https://github.com/SUNIDHI-JAIN125)
+- Aditya R [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adityarags/) [![LinkedIn](https://img.shields.io/badge/Github-%230077B5.svg?logo=github&logoColor=white)](https://github.com/adityarags)
