@@ -32,6 +32,19 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
 
 
 
+# ✨ Gemini API in Action!
+Google's very own `gemini-1.5-flash` LLM model, enabled by **Gemini API** is the brains of the matchmaking feature of our application.  
+
+The LLM evaluates each user's profile and room joining history to predict what type of room the user would prefer to join again.  
+
+With these preferences all rooms are ranked and the user is recommended the room of their liking.  
+
+With Gemini API's structured output generation mechanism, the implementation of the system was much simpler cleaner and more importantly faster!  
+
+When compared with the traditional methods of manually extracting recent context for the model, Gemini API's grounding feature makes it exponentially easy for the model to look throught the internet for recent and relavant information while recommending movies for users.   
+
+To view our implementation of the matchmaking feature using Gemini API✨ head on over to `ml_api/llms/`!  
+
 
 
 # 📃API Documentation
