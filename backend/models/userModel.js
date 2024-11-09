@@ -7,6 +7,8 @@ const userSchema = new mongoose.Schema({
   platforms: { type: [String], default: [] },
   listOfMovies: { type: [String], default: [] },
   genre: { type: [String], default: [] }, 
+  others: { type: [String], default: [] }, 
+  
   createdAt: { type: Date, default: Date.now },
 });
 

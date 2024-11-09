@@ -3,7 +3,7 @@ const User = require("../models/userModel");
 // register usr
 async function registerUser(req, res) {
   try {
-    const { username, platforms, listOfMovies, genre } = req.body;
+    const { username, platforms, listOfMovies, genre, others } = req.body;
     const firebaseUid = req.user.uid; 
 
     let user = await User.findOne({ firebaseUid });
@@ -18,6 +18,7 @@ async function registerUser(req, res) {
       platforms: platforms || [],
       listOfMovies: listOfMovies || [],
       genre: genre || [],
+      others: others || [], 
       createdAt: new Date(),
     });
 
