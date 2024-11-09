@@ -97,7 +97,11 @@ exports.viewAllPublicRooms = async (req, res) => {
       
       const rooms = await Room.find({ public: true })
         .populate('joinedMembers', 'username email') 
-        .populate('createdBy', 'username email');   
+        .populate('createdBy', 'username email') 
+        .populate({
+          path: 'movie',  
+          model: 'Movie',
+        });  
   
       if (!rooms || rooms.length === 0) {
         return res.status(200).json({
@@ -130,8 +134,13 @@ exports.viewRoomDetails = async (req, res) => {
     try {
     
       const room = await Room.findById(roomId)
-        .populate('joinedMembers', 'username email') 
-        .populate('createdBy', 'username email');  
+      .populate('joinedMembers', 'username email')
+      .populate('createdBy', 'username email')
+      .populate({
+        path: 'movie',  
+        model: 'Movie', 
+      });
+ 
   
       if (!room) {
         return res.status(404).json({
@@ -299,7 +308,13 @@ exports.addFriendToRoom = async (req, res) => {
     const currentUserId = req.user.id;
   
     try {
-      const room = await Room.findById(roomId);
+      const room = await Room.findById(roomId)
+      .populate('joinedMembers', 'username email')
+      .populate('createdBy', 'username email')
+      .populate({
+        path: 'movie',
+        model: 'Movie',
+      });
   
       if (!room) {
         return res.status(404).json({ success: false, message: 'Room not found' });
