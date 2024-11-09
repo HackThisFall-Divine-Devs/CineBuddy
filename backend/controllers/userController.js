@@ -81,5 +81,45 @@ async function getAllUsers(req, res) {
 }
 
 
-module.exports = { registerUser,loginUser, getAllUsers};
+
+
+async function fetchJoinRequests(req, res) {
+  const userId = req.user.id;  
+
+  try {
+    
+    const user = await User.findById(userId).select('Requests');
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'User not found',
+      });
+    }
+
+   
+    if (user.Requests.length === 0) {
+      return res.status(200).json({
+        success: true,
+        message: 'No join requests found for this user',
+        requests: [],
+      });
+    }
+
+   
+    return res.status(200).json({
+      success: true,
+      requests: user.Requests,
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: 'Error fetching join requests',
+    });
+  }
+};
+
+
+module.exports = { registerUser,loginUser, getAllUsers,fetchJoinRequests};
 

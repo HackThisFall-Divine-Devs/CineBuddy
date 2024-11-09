@@ -32,7 +32,8 @@ const userSchema = new mongoose.Schema({
     type: [String],
     default: [],
   },
-   joinedRooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
+  joinedRooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
+  Requests:[{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   createdAt: {
     type: Date,
     default: Date.now,

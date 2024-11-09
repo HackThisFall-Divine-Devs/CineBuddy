@@ -185,10 +185,16 @@ exports.viewRoomDetails = async (req, res) => {
     try {
      
       const room = await Room.findById(roomId);
+      const user = await User.findById(userId);
   
       if (!room) {
         return res.status(404).json({ success: false, message: 'Room not found' });
       }
+
+      if (!user) {
+        return res.status(404).json({ success: false, message: 'User not found' });
+      }
+  
   
      
       if (room.joinedMembers.includes(userId)) {
@@ -202,6 +208,10 @@ exports.viewRoomDetails = async (req, res) => {
   
       room.pendingRequests.push(userId);
       await room.save();
+
+      user.Requests.push(roomId); 
+    await user.save();
+
   
       return res.status(200).json({ success: true, message: 'Join request sent successfully' });
     } catch (error) {
