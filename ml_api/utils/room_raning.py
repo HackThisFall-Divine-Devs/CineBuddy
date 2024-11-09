@@ -30,7 +30,7 @@ def rank_rooms(user_id):
     ).json()
 
     current_user = [i for i in all_users if i["_id"] == user_id][0]
-
+    user_preference = current_user.get("listOfMovies", "")
     user_watch_history = current_user["joinedRooms"]
     
 
@@ -58,7 +58,7 @@ def rank_rooms(user_id):
     } for _ in required_rooms]
 
 
-    llm_res = generate_preference(llm_format_rooms).to_dict()
+    llm_res = generate_preference(user_preference, llm_format_rooms).to_dict()
     predictions = json.loads(llm_res["candidates"][0]["content"]["parts"][0]["text"])
     final_rooms = sortByScores(candidate_rooms, predictions)
 
