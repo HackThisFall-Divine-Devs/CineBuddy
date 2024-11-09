@@ -12,7 +12,7 @@ router.post("/login", loginUser);
 
 router.get("/all", authMiddleware, getAllUsers); 
 router.get("/fetch-requests", authMiddleware, fetchJoinRequests); 
-router.post("/my-rooms",authMiddleware, myRooms);
+router.get("/my-rooms",authMiddleware, myRooms);
 router.get('/stream-link', authMiddleware, JoinStream);
 
 router.get("/profile", authMiddleware, (req, res) => {
