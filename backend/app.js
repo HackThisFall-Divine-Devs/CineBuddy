@@ -1,10 +1,10 @@
+require('dotenv').config();
 require('./room-cleaner/roomDissolve.js'); 
 const express = require('express');
 const connectDB = require('./database/db.js');
-const cors = require('cors');
 
-dotenv.config()
-app.use(cors());
+
+
 const app = express();
 app.use(express.json());
 connectDB();
