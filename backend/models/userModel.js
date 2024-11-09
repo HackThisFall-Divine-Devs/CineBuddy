@@ -32,6 +32,7 @@ const userSchema = new mongoose.Schema({
     type: [String],
     default: [],
   },
+   joinedRooms: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Room' }],
   createdAt: {
     type: Date,
     default: Date.now,

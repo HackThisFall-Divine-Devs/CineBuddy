@@ -247,6 +247,9 @@ if (room.createdBy.toString() !== currentUserId) {
    
     room.joinedMembers.push(userId);
     room.pendingRequests = room.pendingRequests.filter(reqId => reqId.toString() !== userId);
+
+    await User.findByIdAndUpdate(userId, { $addToSet: { joinedRooms: roomId } });
+  
   } else if (action === 'deny') {
    
     room.pendingRequests = room.pendingRequests.filter(reqId => reqId.toString() !== userId);
@@ -354,6 +357,8 @@ exports.addFriendToRoom = async (req, res) => {
 
      
       await room.save();
+
+      await User.findByIdAndUpdate(friendId, { $addToSet: { joinedRooms: roomId } });
 
       return res.status(200).json({
           success: true,
