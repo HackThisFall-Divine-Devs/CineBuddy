@@ -1,5 +1,5 @@
 const express = require("express");
-const { registerUser, loginUser, getAllUsers, fetchJoinRequests, JoinStream} = require("../controllers/userController");
+const { registerUser, loginUser, getAllUsers, fetchJoinRequests, JoinStream, myRooms} = require("../controllers/userController");
 const authMiddleware = require("../middleware/authMiddleware");
 
 const router = express.Router();
@@ -12,6 +12,7 @@ router.post("/login", loginUser);
 
 router.get("/all", authMiddleware, getAllUsers); 
 router.get("/fetch-requests", authMiddleware, fetchJoinRequests); 
+router.get("/my-rooms",authMiddleware, myRooms);
 router.get('/stream-link', authMiddleware, JoinStream);
 
 router.get("/profile", authMiddleware, (req, res) => {
