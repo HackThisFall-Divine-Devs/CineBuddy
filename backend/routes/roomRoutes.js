@@ -30,7 +30,8 @@ router.get('/search', authenticate, async (req, res) => {
   try {
     const rooms = await Room.find(query)
       .populate('createdBy', 'username email')
-      .populate('joinedMembers', 'username email');
+      .populate('joinedMembers', 'username email')
+      .populate('movie');
     res.status(200).json({ success: true, rooms });
   } catch (error) {
     console.error(error);
