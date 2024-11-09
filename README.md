@@ -1,4 +1,4 @@
-# CineBuddy
+# CineBuddy 🍿 
 Because movies are better with company🤗
 
 It's friday night, your'e all set for to binge your favourite movie🥳  
@@ -14,7 +14,7 @@ In just a few clicks, you can join or create a movie group with others who want 
 
 When the credits roll, the group vanishes—no clutter, no hassle, just a shared experience.
 
-## Features⚙
+# ⚙ Features
 - **Create or Join a Group**:
   Users can form a group of any size (e.g., a cozy circle of 5 or a large public gathering) and select the movie they’d like to watch, along with a preferred showtime.
 - **Open to All or Invite-Only**:
@@ -24,4 +24,7 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
   
   
 # 💻 Tech Stack:
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)  
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)  
+![GeminiAPI](https://img.shields.io/badge/Google%20Gemini-8E75B2.svg?style=for-the-badge&logo=Google-Gemini&logoColor=white)  
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
