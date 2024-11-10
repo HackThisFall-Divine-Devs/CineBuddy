@@ -15,8 +15,8 @@ In just a few clicks, you can join or create a movie group with others who want 
 When the credits roll, the group vanishes—no clutter, no hassle, just a shared experience.
 
 <div style="display: flex; flex-direction: row">
-  <img src = "https://github.com/user-attachments/assets/9c25784e-caf0-4caf-b614-7a02e84cc878" width = "50%"> 
-  <img src = "https://github.com/user-attachments/assets/163034ee-aea7-424d-bd23-dec8a2d092b6" width = "50%">
+  <img src = "https://github.com/user-attachments/assets/9c25784e-caf0-4caf-b614-7a02e84cc878" width = "40%"> 
+  <img src = "https://github.com/user-attachments/assets/163034ee-aea7-424d-bd23-dec8a2d092b6" width = "40%">
 </div>
 
 
