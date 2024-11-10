@@ -67,7 +67,7 @@ With these preferences all rooms are ranked and the user is recommended the room
 
 With Gemini API's structured output generation mechanism, the implementation of the system was much simpler cleaner and more importantly faster!  
 
-When compared with the traditional methods of manually extracting recent context for the model, Gemini API's grounding feature makes it exponentially easy for the model to look throught the internet for recent and relavant information while recommending movies for users.   
+When compared with the traditional methods of manually extracting recent context for the model, Gemini API's grounding feature makes it exponentially easy for the model to look through the internet for recent and relevant  information while recommending movies for users.   
 
 To view our implementation of the matchmaking feature using Gemini API✨ head on over to `ml_api/llms/`!  
 
