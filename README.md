@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/e50592c7-3f4a-4305-8224-65263a6f6e90)
+
 # CineBuddy 🍿 
 Because movies are better with company🤗
 
