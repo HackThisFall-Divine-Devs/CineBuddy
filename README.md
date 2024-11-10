@@ -14,6 +14,14 @@ In just a few clicks, you can join or create a movie group with others who want 
 
 When the credits roll, the group vanishes—no clutter, no hassle, just a shared experience.
 
+<div style="display: flex; flex-direction: row">
+  <img src = "https://github.com/user-attachments/assets/9c25784e-caf0-4caf-b614-7a02e84cc878" width = "50%"> 
+  <img src = "https://github.com/user-attachments/assets/163034ee-aea7-424d-bd23-dec8a2d092b6" width = "50%">
+</div>
+
+
+
+
 # ⚙ Features
 - **Create or Join a Group**:
   Users can form a group of any size (e.g., a cozy circle of 5 or a large public gathering) and select the movie they’d like to watch, along with a preferred showtime.
