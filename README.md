@@ -20,6 +20,16 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
 </div>
 
 
+# 📸 Clicks
+<div style="display: flex; flex-direction: row; overflow-x: scroll">
+  <img src = "https://github.com/user-attachments/assets/cdcde4d3-e8e8-4cac-8a5f-0daaf523eea7" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/4391e6e2-9fe9-4af5-90dd-626502862f98" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/1423c7f6-48bb-4463-8d2e-5f78793c0f56" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/b7a702d5-118b-4b59-b561-4979a4e3df43" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/c837ce71-55b7-420e-b341-5abf93a1b4a2" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/7d34331e-5638-4137-907a-bab2915ca661" width = "30%">
+
+</div> 
 
 
 # ⚙ Features
