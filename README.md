@@ -28,6 +28,12 @@ When the credits roll, the group vanishes—no clutter, no hassle, just a shared
   <img src = "https://github.com/user-attachments/assets/b7a702d5-118b-4b59-b561-4979a4e3df43" width = "30%">
   <img src = "https://github.com/user-attachments/assets/c837ce71-55b7-420e-b341-5abf93a1b4a2" width = "30%">
   <img src = "https://github.com/user-attachments/assets/7d34331e-5638-4137-907a-bab2915ca661" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/e4ddabb2-e9d3-44f8-a26f-2d4b0fc5b027" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/cdc9f1be-ddcb-4543-aa79-c4fa40f69dcb" width = "30%">
+  <img src = "https://github.com/user-attachments/assets/1f37f0b6-27dd-4998-900c-0b1c2da6ebf5" width = "30%">
+
+
+
 
 </div> 
 
