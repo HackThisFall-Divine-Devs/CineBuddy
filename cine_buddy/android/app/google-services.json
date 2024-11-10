@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724448664603",
+    "project_id": "cine-buddy",
+    "storage_bucket": "cine-buddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724448664603:android:036173e9689f84a491acbe",
+        "android_client_info": {
+          "package_name": "com.cine_buddy.cine_buddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfkfv9P5p7FCMO_sY0NmyAJN1vCF03qTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
